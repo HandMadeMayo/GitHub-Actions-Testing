@@ -15,7 +15,7 @@ on:
 				type: string
 
 jobs:
-  greet:
+	greet:
     runs-on: ubuntu-latest
     steps:
       - name: Display File Content

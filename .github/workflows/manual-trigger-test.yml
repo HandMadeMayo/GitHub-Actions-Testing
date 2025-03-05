@@ -1,27 +1,27 @@
 on: 
-	workflow_dispatch:
-		inputs:
-			name:
-				description: "Who is it?"
-				required: true
-				type: string
-			test:
-				description: "Is this a test?"
-				required: true
-				type: string
-			data:
-				description: "The file that contains supplementary data."
-				required: false
-				type: string
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Who is it?"
+        required: true
+        type: string
+      test:
+        description: "Is this a test?"
+        required: true
+        type: string
+      data:
+        description: "The file that contains supplementary data."
+        required: false
+        type: string
 
 jobs:
-	greet:
-    		runs-on: ubuntu-latest
-    			steps:
-      				- name: Display File Content
-        			  run: echo "${{ inputs.data }}"
-      				- name: Display Greeting
-        			  run: echo "Hello ${{ input.name }}"
-      				- name: Confirm Test
-        			  run: echo "Confirming if this is a test... ${{ input.test }}"
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display File Content
+        run: echo "${{ inputs.data }}"
+      - name: Display Greeting
+        run: echo "Hello ${{ inputs.name }}"
+      - name: Confirm Test
+        run: echo "Confirming if this is a test... ${{ inputs.test }}"
   

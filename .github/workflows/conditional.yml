@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   hello-world:
-    if: github.repository == 'HandMadeMayo/GitHub-Actions-Testing'
+    if: github.repository == 'HandMadeMayo/test'
     runs-on: ubuntu-latest
     steps:
       - name: "Hello World"

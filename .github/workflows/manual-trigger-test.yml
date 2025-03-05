@@ -16,12 +16,12 @@ on:
 
 jobs:
 	greet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Display File Content
-        run: echo "${{ inputs.data }}"
-      - name: Display Greeting
-        run: echo "Hello ${{ input.name }}"
-      - name: Confirm Test
-        run: echo "Confirming if this is a test... ${{ input.test }}"
+    		runs-on: ubuntu-latest
+    			steps:
+      				- name: Display File Content
+        			  run: echo "${{ inputs.data }}"
+      				- name: Display Greeting
+        			  run: echo "Hello ${{ input.name }}"
+      				- name: Confirm Test
+        			  run: echo "Confirming if this is a test... ${{ input.test }}"
   

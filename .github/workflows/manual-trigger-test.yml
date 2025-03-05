@@ -1,3 +1,5 @@
+name: Manual Trigger Test
+
 on: 
   workflow_dispatch:
     inputs:

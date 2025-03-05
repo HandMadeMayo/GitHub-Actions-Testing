@@ -1,0 +1,16 @@
+name: conditional workflow
+
+on: [push]
+
+jobs:
+  hello-world:
+    if: github.repository == 'HandMadeMayo/GitHub-Actions-Testing'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello World"
+        run: echo "Hello World!"
+  bye-dude:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Bye Dude"
+        run: echo "Bye Dude!"

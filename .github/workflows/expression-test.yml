@@ -1,0 +1,22 @@
+name: Expression Test
+
+on:
+  push:
+    branches:
+      - main
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  expression-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "String Check Conditional"
+        if: contains('Hello World', 'Hello')
+        run: echo "Hello World contains the word Hello"
+      - name: "Job Success"
+        if: ${{ success() }}
+        run: echo "The job has succeeded!"
+      - name: "Job Failure"
+        if: ${{ failure() }}
+        run: echo "The job failed!"

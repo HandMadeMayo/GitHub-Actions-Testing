@@ -8,7 +8,8 @@ jobs:
     steps:
       - name: Set env var
         run: |
-          echo "TEST_ENV=test" > "${GITHUB_ENV}"
+          export GITHUB_ENV
+          echo "TEST_ENV=test" > $GITHUB_ENV
       - name: Call env var
         run: |
           echo $GITHUB_ENV

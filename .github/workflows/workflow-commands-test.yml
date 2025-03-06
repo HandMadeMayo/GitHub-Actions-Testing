@@ -1,0 +1,12 @@
+name: Workflow Commands Test
+
+on: [push]
+
+jobs:
+  command-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set env var
+        run: |
+          echo "TEST_ENV=test" >> $GITHUB_ENV
+          echo "${{ GITHUB_ENV }}"

@@ -1,0 +1,12 @@
+name: Workflow Context Test
+
+on: [push]
+
+jobs:
+  context-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Context Test"
+        run: echo "Hello $ACTOR !"
+        env:
+          ACTOR: ${{ github.actor }}

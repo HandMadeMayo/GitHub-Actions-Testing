@@ -9,4 +9,4 @@ jobs:
       - name: Set env var
         run: |
           echo "TEST_ENV=test" >> $GITHUB_ENV
-          echo "${{ GITHUB_ENV }}"
+          echo $GITHUB_ENV
